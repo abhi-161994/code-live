@@ -213,7 +213,7 @@ body {
 }
 
 
-</style> -->
+</style>
 
 
 
@@ -226,7 +226,7 @@ body {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Try it yourself editor</title>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<style type="text/css">
 			textarea, iframe {
     			border: 2px solid #ddd;
@@ -240,7 +240,7 @@ body {
             <tr>
                 <td width="50%" scope="col">&nbsp;</td>
                 <td width="50%" align="left" scope="col">
-                    <!-- <input onkeyup="runCode();" type="button" value="Run Code"> -->
+                    <!-- <input onkeyup="runCode();" type="button" value="Run Code">
                 </td>
             </tr>
             <tr>
@@ -291,4 +291,101 @@ body {
         </script>
     </body>
 </html>
-VIEW DEMO
+VIEW DEMO   -->
+<style>
+
+
+#wrap {
+width: 100%;
+height: 100%;
+}
+
+/* Code Editors */
+
+#code_editors {
+position: absolute;
+top: 0; left: 0; bottom: 0; right: 60%;
+}
+
+#code_editors .code_box {
+height: 33%; width: 100%;
+position: relative;
+}
+.code_box h3 {
+font-size: 13px;
+height: 30px;
+padding: 5px 10px; margin: 0;
+background: linear-gradient(#707070, #555);
+color: white;
+border-top: 1px solid #8F8F8F;
+border-bottom: 1px solid #202020;
+}
+.code_box textarea {
+position: absolute;
+left: 0; right: 0; top: 30px; bottom: 0;
+resize: none; border: 0;
+padding: 10px;
+font-family: monospace;
+}
+.code_box textarea:focus {
+outline: none;
+background: #EFEFEF;
+}
+
+/* Output Area */
+#output {
+position: absolute;
+left: 40%; top: 0; right: 0; bottom: 0;
+border: 5px solid #444;
+border-left-width: 10px;
+overflow: hidden;
+}
+
+#output iframe {
+width: 100%; height: 100%;
+border: 0;
+}
+</style>
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.19.0/codemirror.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+<div id="wrap">
+
+  <!-- Code Editors -->
+  <section id="code_editors">
+    <div id="html" class="code_box">
+      <h3>HTML</h3>
+      <textarea name="html"></textarea>
+    </div>
+    <div id="css" class="code_box">
+      <h3>CSS</h3>
+      <textarea name="css"></textarea>
+    </div>
+    <div id="js" class="code_box">
+      <h3>JavaScript</h3>
+      <textarea name="js"></textarea>
+    </div>
+  </section>
+
+  <!-- Sandboxing -->
+  <section id="output">
+    <iframe></iframe>
+  </section>
+
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.19.0/codemirror.js"></script>
+
+<!-- For HTML/XML -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.19.0/mode/xml/xml.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.19.0/mode/htmlmixed/htmlmixed.js"></script>
+
+<!-- For CSS -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.16.0/mode/css/css.js"></script>
+
+<!-- For JS -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.19.0/mode/javascript/javascript.js"></script>
+<script src="/assets/js.js"></script>
