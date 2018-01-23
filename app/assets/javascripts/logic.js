@@ -1,12 +1,3 @@
-
-		/*	$('#btn-result').click(
-					function() {
-						$("#resultcontainer").contents().find("html").html("<style>"+$('#csscontainer').val()+"</style>"+$("#htmlcontainer").val());
-						document.getElementById("resultcontainer").contentWindow.eval($('#jscontainer').val());
-					}
-				);
-		*/
-
 $(document).ready( function(){
 
 
@@ -112,12 +103,8 @@ $(document).ready( function(){
 
 	 $("#jscontainer").on('change',function(){
 	  p.find("#botjs").remove();
-	  p.append('<script id="botjs">'+$(this).val()+'</script>');
+	  p.append('<script id="botjs">'+$(this  ).val()+'</script>');
 	 });
-
-
-
-
 
 	 $("#btn-result").on('click',function(){
 	  p.find("#botjs").remove();
